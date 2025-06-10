@@ -1,96 +1,56 @@
-package Carro;
-
-import java.util.Objects;
+package carro;
 
 public class Carro {
-
-    private int ano;
     private String modelo;
-    private String marca;
-    private String cor;
-    private String estado;
+    private String placa;
+    private boolean estacionado;
 
-    public Carro(int ano, String modelo, String marca, String cor) {
-        this.ano = ano;
+    public Carro(String modelo, String placa, boolean estacionado) {
         this.modelo = modelo;
-        this.marca = marca;
-        this.cor = cor;
-        this.estado = "desligado";
+        this.placa = placa;
+        this.estacionado = estacionado;
     }
-
-    public void ligarOuDesligarCarro() {
-        if (this.estado.equals("ligado")){
-            this.estado = "desligado";
-        } else {
-            this.estado = "ligado";
-        }
-    }
-
+    
     public Carro() {
         super();
     }
-
-    public int getAno() {
-        return this.ano; // can be return ano;
+    
+    public Carro(String placa, String modelo) {
+        this.placa = placa;
+        this.modelo = modelo;
     }
 
-    public int setAno(int ano) {
-        return this.ano = ano;
+    public Carro(String modelo) {
+        this.modelo = modelo;
     }
+
 
     public String getModelo() {
         return modelo;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
+
+    
+    public boolean isEstacionado() {
+        return estacionado;
+    }
+
+    public void setEstacionado(boolean estacionado) {
+        this.estacionado = estacionado;
+    }
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
-    public String getCor() {
-        return cor;
+    
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Carro carro = (Carro) o;
-        return ano == carro.ano && Objects.equals(modelo, carro.modelo) && Objects.equals(marca, carro.marca) && Objects.equals(cor, carro.cor);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(ano, modelo, marca, cor);
-    }
-
-    @Override
     public String toString() {
-        return "Carro{" +
-                "ano=" + ano +
-                ", modelo='" + modelo + '\'' +
-                ", marca='" + marca + '\'' +
-                ", cor='" + cor + '\'' +
-                '}';
+        return "Carro [modelo=" + modelo + ", placa=" + placa + ", estacionado=" + estacionado + "]";
     }
 }
-
-
