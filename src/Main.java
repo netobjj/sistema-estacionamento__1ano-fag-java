@@ -4,7 +4,7 @@ import vaga.Vaga;
 import garagem.Garagem;
 //teste
 teste = "";
-
+ddd = "";
 
 import java.util.Scanner;
 import java.util.ArrayList;
