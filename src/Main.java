@@ -2,6 +2,9 @@ import carro.Carro;
 import pessoa.Pessoa;
 import vaga.Vaga;
 import garagem.Garagem;
+//teste
+teste = "";
+
 
 import java.util.Scanner;
 import java.util.ArrayList;
